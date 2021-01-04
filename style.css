@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #19191b;
+    font-family: 'Syncopate', sans-serif;
+}
+
+.app {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 50px 0px 30px 0px;
+    text-align: center;
+    font-size: 40px;
+    color: #f8f4f4;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 20px;
+    color: #b19f9d;
+    text-align: center;
+    padding: 0px 0px 5px 0px;
+}
+
+.pads {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+    align-items: center;
+    justify-items: center;
+    border: 1px solid #b19f9d;
+}
+
+.pads>div {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    flex: 1;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pad1 {
+    background: #a64ac9;
+}
+
+.pad2 {
+    background: #fccd05;
+}
+
+.pad3 {
+    background: #ffb38f;
+}
+
+.pad4 {
+    background: #f6e6cc;
+}
+
+.pad5 {
+    background: #17e9e0;
+}
+
+.pad6 {
+    background: #c94ab6;
+}
+
+@keyframes jump {
+    0% {
+        bottom: 0%;
+        left: 20%;
+    }
+    25% {
+        bottom: 5%;
+        left: 35%;
+    }
+    50% {
+        bottom: 40%;
+        left: 50%;
+    }
+    75% {
+        bottom: 80%;
+        left: 70%;
+    }
+    100% {
+        bottom: 0%;
+        left: 80%;
+    }
+}
+
+.visual>div {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    bottom: 0%;
+    transform: scale(1);
+}
+
+
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .pads {
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .pads {
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+    }
+}
